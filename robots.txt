@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pestana-interior.vercel.app/sitemap.xml

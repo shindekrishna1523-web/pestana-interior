@@ -73,6 +73,42 @@ img{max-width:100%;height:auto}
 }
 .about-main-img,.services-main-img{display:block;max-width:100%;object-fit:cover}
 @media(max-width:560px){.about-main-img{height:260px!important}.services-main-img{height:230px!important}}
+
+/* Hero-first inquiry panel */
+.hero{min-height:100vh;min-height:100svh;padding-top:74px}
+.hero-content{width:min(1180px,92%);padding:70px 0;display:flex;align-items:center;justify-content:space-between;gap:42px}
+.hero-copy{max-width:680px}
+.hero-copy h1{margin-bottom:16px}
+.hero-copy p{max-width:620px}
+.hero-inquiry{width:min(390px,100%);background:rgba(255,255,255,.96);color:var(--ink);padding:24px;border-radius:12px;box-shadow:0 24px 70px rgba(0,0,0,.28);backdrop-filter:blur(8px)}
+.hero-inquiry h3{margin:0 0 6px;color:var(--navy2);font-size:24px}
+.hero-inquiry .sub{margin:0 0 16px;color:var(--muted);font-size:13px;line-height:1.5}
+.inquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.inquiry-field{width:100%;border:1px solid #d7dfe3;border-radius:7px;padding:12px 11px;font:inherit;font-size:13px;outline:none;background:#fff}
+.inquiry-field:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(11,93,131,.1)}
+.hero-inquiry textarea{min-height:82px;resize:vertical;margin-top:10px}
+.hero-inquiry .inquiry-submit{width:100%;margin-top:10px;border:0;background:var(--navy);color:#fff;border-radius:7px;padding:13px 15px;font-weight:800;cursor:pointer}
+.hero-inquiry .inquiry-submit:hover{background:var(--navy2)}
+.hero-inquiry .quick-actions{display:flex;gap:8px;margin-top:9px}
+.hero-inquiry .quick-actions a{flex:1;text-align:center;border:1px solid #d7dfe3;border-radius:7px;padding:10px;font-size:12px;font-weight:700}
+.hero-inquiry .quick-actions a:hover{border-color:var(--navy);color:var(--navy)}
+.hero-inquiry .privacy-note{margin:9px 0 0;font-size:10px;color:#7a858b;line-height:1.4}
+@media(max-width:900px){
+  .hero-content{padding:54px 0 76px;display:block}
+  .hero-copy{max-width:700px}
+  .hero-inquiry{margin-top:24px;width:min(440px,100%)}
+}
+@media(max-width:560px){
+  .hero{min-height:100svh;padding-top:62px}
+  .hero-content{padding:38px 0 64px}
+  .hero-copy h1{font-size:clamp(32px,10vw,48px)}
+  .hero-copy p{font-size:13px}
+  .hero-inquiry{padding:18px;border-radius:10px;margin-top:18px}
+  .hero-inquiry h3{font-size:21px}
+  .inquiry-grid{grid-template-columns:1fr}
+  .hero-inquiry textarea{min-height:70px}
+  .hero-dots{bottom:12px!important}
+}
 </style>
 </head>
 <body><div class="progress-bar" id="progressBar"></div>
@@ -81,7 +117,7 @@ img{max-width:100%;height:auto}
   <div class="hero-slide active"><img src="assets/hero/pestana_hero_luxury.webp" alt="Luxury Pestana interior"></div>
   <div class="hero-slide"><img src="assets/portfolio/portfolio_p01_01.webp" alt="Pestana Interiors portfolio"></div>
   <div class="hero-slide"><img src="assets/portfolio/portfolio_p02_01.webp" alt="Pestana Interiors design"></div>
-</div><div class="hero-dots" id="heroDots"><button class="hero-dot active" data-slide="0" aria-label="Show hero image 1"></button><button class="hero-dot" data-slide="1" aria-label="Show hero image 2"></button><button class="hero-dot" data-slide="2" aria-label="Show hero image 3"></button></div><div class="hero-overlay"></div><div class="hero-content"><div class="eyebrow">Stylish · Efficient · Affordable</div><h1>Interior spaces made for living.</h1><p>PESTANA INTERIORS is an Interior Design Firm headquartered at Pune, offering Interior Design, Architecture, Landscape Designing, turnkey project management and exclusive interior design services.</p><div class="btns"><a class="btn primary" href="#portfolio">Explore Portfolio</a><a class="btn ghost" href="#contact">Contact Pestana</a></div></div></section>
+</div><div class="hero-dots" id="heroDots"><button class="hero-dot active" data-slide="0" aria-label="Show hero image 1"></button><button class="hero-dot" data-slide="1" aria-label="Show hero image 2"></button><button class="hero-dot" data-slide="2" aria-label="Show hero image 3"></button></div><div class="hero-overlay"></div><div class="hero-content"><div class="hero-copy"><div class="eyebrow">Stylish · Efficient · Affordable</div><h1>Interior spaces made for living.</h1><p>Explore Pestana Interiors projects and connect with the team for your home or commercial interior requirements.</p><div class="btns"><a class="btn primary" href="#portfolio">Explore Portfolio</a><a class="btn ghost" href="#contact">View Contact</a></div></div><div class="hero-inquiry" id="quickInquiry"><h3>Quick Inquiry</h3><p class="sub">Tell us what you need. Your details will open directly in WhatsApp for Pestana Interiors.</p><form id="heroInquiryForm"><div class="inquiry-grid"><input class="inquiry-field" id="inqName" name="name" placeholder="Your name" required><input class="inquiry-field" id="inqPhone" name="phone" type="tel" inputmode="tel" placeholder="Phone number" required></div><input class="inquiry-field" id="inqCity" name="city" placeholder="City / Location" style="margin-top:10px"><textarea class="inquiry-field" id="inqMessage" name="message" placeholder="What interior work do you need?" required></textarea><button class="inquiry-submit" type="submit">Send Inquiry on WhatsApp</button></form><div class="quick-actions"><a href="tel:+919673988055">Call Now</a><a href="https://wa.me/919673988055?text=Hello%20Pestana%20Interiors%2C%20I%20want%20an%20interior%20design%20consultation." target="_blank" rel="noopener">WhatsApp</a></div><p class="privacy-note">Your inquiry is prepared as a WhatsApp message; no email is required.</p></div></div></section>
 <section class="section" id="about"><div class="container"><div class="head"><div><div class="eyebrow">01 · About Pestana</div><h2>A holistic vision for residential & commercial spaces.</h2></div><p>Established in 2017–18, Pestana Interiors describes itself as a Pune-based firm focused on creative, cost-effective design solutions and transforming houses into warm, inviting homes.</p></div><div class="about"><div><img src="assets/portfolio/portfolio_p02_01.webp" alt="Pestana Interiors project" class="about-main-img" style="width:100%;height:360px;object-fit:cover;border-radius:8px;box-shadow:var(--shadow);margin-bottom:20px"><div class="about-copy">The portfolio describes a group of innovative minds taking creative challenges and providing a wide range of design ideas across Pune & PCMC. The stated approach is to create cost-effective design wonders that reflect the people living in the spaces, with a focus on evolving, inspiring design and excellence.</div></div><div class="facts"><div class="fact"><strong>Based in Pune</strong><span>Interior Design Firm headquartered at Pune.</span></div><div class="fact"><strong>Since 2017–18</strong><span>Professional practice in Interior Design, Architecture and Landscape Designing.</span></div><div class="fact"><strong>Turnkey Projects</strong><span>Project management and exclusive interior design services.</span></div><div class="fact"><strong>Pune & PCMC</strong><span>Residential and commercial spaces across the stated service area.</span></div></div></div></div></section>
 <section class="section alt" id="services"><div class="container"><div class="head"><div><div class="eyebrow">02 · Services</div><h2>All interiors under one roof.</h2></div><p>The portfolio groups Pestana's offering into modular solutions, personal design, furniture & décor, and on-site services.</p></div><div style="margin-bottom:28px"><img src="assets/portfolio/portfolio_p03_01.webp" alt="Pestana interior detail" class="services-main-img" style="width:100%;height:300px;object-fit:cover;border-radius:8px"></div><div class="services"><div class="service"><b>MODULAR</b><h3>Modular Solutions</h3><p>Modular kitchen, wardrobes, TV units, storage units and more.</p></div><div class="service"><b>DESIGN</b><h3>Personal Designer</h3><p>Design & concepts, art panels and easy payment options.</p></div><div class="service"><b>FURNITURE</b><h3>Furniture & Décor</h3><p>Soft furnishing, customised furniture for every room, decorative pieces, lighting and metal/wooden wall art.</p></div><div class="service"><b>ON-SITE</b><h3>Execution Services</h3><p>False ceiling, electrical & plumbing, demolition & repairs, carpentry, wall design/paneling, painting, terrace garden and flooring work.</p></div></div></div></section>
 <section class="section"><div class="container"><div class="head"><div><div class="eyebrow">03 · Why Pestana</div><h2>What the portfolio says clients can expect.</h2></div></div><div class="why"><div class="why-col"><h3>When you choose others?</h3><ul><li>Multiple contractors & market trips</li><li>Hassle of dealing with multiple contractors</li><li>No dedicated team of designers</li><li>No VR walkthroughs / advanced technology support</li><li>No periodic quality checks</li><li>Use of low-grade material to save cost</li><li>Over promising & under delivery</li><li>Overhead charges and unclear final price</li><li>No after-sales support</li></ul></div><div class="why-col"><h3>When you choose Pestana Interiors?</h3><ul><li>All under one roof</li><li>Dedicated team of designers</li><li>Periodic inspections & timely quality checks</li><li>3D visual walkthroughs and interactive VR walkthroughs</li><li>No false claims / lowest price guarantee</li><li>No hidden charges</li><li>Dedicated after-sales support</li><li>Unbeatable warranty — 10 years warranty stated in the portfolio</li></ul></div></div></div></section>
@@ -186,6 +222,29 @@ render();
 
   showSlide(0);
   startSlider();
+})();
+</script>
+
+<script>
+(function(){
+  const form=document.getElementById('heroInquiryForm');
+  if(!form) return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const name=document.getElementById('inqName').value.trim();
+    const phone=document.getElementById('inqPhone').value.trim();
+    const city=document.getElementById('inqCity').value.trim();
+    const message=document.getElementById('inqMessage').value.trim();
+    const text=[
+      'Hello Pestana Interiors, I want an interior design consultation.',
+      '',
+      'Name: '+name,
+      'Phone: '+phone,
+      city ? 'City: '+city : '',
+      'Requirement: '+message
+    ].filter(Boolean).join('\\n');
+    window.open('https://wa.me/919673988055?text='+encodeURIComponent(text),'_blank','noopener');
+  });
 })();
 </script>
 
